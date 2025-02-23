@@ -1,6 +1,6 @@
 console.log('work')
 
-const bici = [
+const bike = [
     {
         type: 'zephyr',
         weight: '30'
@@ -19,9 +19,15 @@ const bici = [
     }
 ]
 
-function lighterWeight(bike) {
-    return bici.weight < 70;
+let lightestBike = bike[0];
+
+for (let i = 0; i < bike.length; i++) {
+    if (bike[i].weight < lightestBike.weight) {
+        lightestBike = bike[i];
+    }
 }
+
+console.log(lightestBike)
 
 
 
