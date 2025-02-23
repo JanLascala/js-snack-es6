@@ -21,8 +21,9 @@ const teams = [
     },
 ]
 
-for (let key in teams) {
-    Math.random(teams.scores)
-}
+teams.forEach(team => {
+    team.scores = Math.floor(Math.random() * 10) + 1;
+    team.penalties = Math.floor(Math.random() * 10) + 1;
+});
 
-console.log(teams)
+console.log(teams);
